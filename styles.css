@@ -1,0 +1,332 @@
+html {
+    height: 100%; 
+    margin: 0; 
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: auto; 
+    background: url('Clara.jpg') no-repeat center center;
+    background-size: cover;
+    transition: background 1s ease-in-out;
+}
+
+body.exiting {
+    background: none; /* Remove a imagem de fundo durante a transição */
+    overflow: auto; 
+}
+
+.content {
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 1; 
+    background: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 1;
+    transition: opacity 1s ease-in-out; /* Transição suave */
+}
+
+.content.exiting {
+    opacity: 0; /* Faz o conteúdo sumir */
+}
+
+.title {
+    font-size: 50px;
+    font-weight: bolder;
+    text-shadow: 0px 0px 20px brown;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    animation: Shadow 1s ease-in-out infinite forwards;
+}
+
+.sub {
+    font-size: 24px;
+    font-family: cursive;
+    color: white;
+}
+
+@keyframes Shadow {
+    0% {
+        text-shadow: 0px 0px 5px brown;
+    }
+    25% {
+        text-shadow: 0px 0px 10px brown;
+    }
+    50% {
+        text-shadow: 0px 0px 20px brown;
+    }
+    75% {
+        text-shadow: 0px 0px 10px brown;
+    }
+    100% {
+        text-shadow: 0px 0px 5px brown;
+    }
+}
+
+#but {
+    width: 170px;
+    height: 40px;
+    font-size: 25px;
+    border-radius: 15px;
+    border: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+    box-shadow: 0px 0px 20px 5px brown;
+    color: brown;
+    opacity: 1;
+    transition: all 0.5s ease-in-out; /* Transição suave */
+}
+
+#but.exiting {
+    opacity: 0; /* Faz o botão sumir */
+}
+
+#but:hover {
+    cursor: pointer;
+    color: white;
+    background-color: brown;
+    box-shadow: 0px 0px 20px 5px white;
+}
+
+/* Novo background amarelo inicialmente escondido */
+#newBackground {
+    position: fixed;
+    top: 100%; /* Começa fora da tela */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, yellow, rgb(222, 131, 3));
+    z-index: 0;
+    transition: top 1s ease-in-out; /* Animação de descida */
+}
+
+/* Classe adicionada para ativar a transição */
+#newBackground.active {
+    top: 0; /* Move o fundo amarelo para cobrir a tela */
+    
+}
+
+#roda{
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 300px;
+    border-radius: 20%;
+    box-shadow: 0px 0px 20px 5px brown;
+}
+
+.title2{
+    font-size: 50px;
+    font-weight: bolder;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 0 0 10px black;
+    text-align: center;
+}
+
+.sub2{
+    font-family: cursive;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 3px black;
+    font-size: large;
+
+}
+
+.check{
+    position: absolute;
+    left: 67%;
+    bottom: 90%;
+    width: 60px;
+    height: 40px;
+    filter: drop-shadow(0 0 5px green);
+}
+
+.buttonDream{
+    font-size: larger;
+    font-family: cursive;
+    background: white;
+    color: brown;
+    width: 200px;
+    height: 35px;
+    border: 1px none transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    position: absolute;
+    left: 3%;
+    transition: all 0.5s;
+}
+.buttonDream:hover{
+    background-color: brown;
+    color: white;
+    box-shadow: 0 0 20px 5px white;
+}
+
+.dreamImg{
+    width: 250px;
+    height: 300px;
+    transform: scale(0.0);
+    border-radius: 15px;
+    box-shadow: 0 0 40px 5px white;
+    position: absolute;
+}
+
+#im1{
+    top: 45%;
+    left: 1%;
+}
+
+
+
+
+.buttonDream2{
+    font-size: larger;
+    font-family: cursive;
+    background: brown;
+    color: white;
+    width: 200px;
+    height: 35px;
+    border: 1px none transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    position: absolute;
+    left: 23%;
+    transition: all 0.5s;
+}
+.buttonDream2:hover{
+    background-color: white;
+    color: brown;
+    box-shadow: 0 0 20px 5px brown;
+}
+
+.dreamImg2{
+    width: 250px;
+    height: 300px;
+    transform: scale(0.0);
+    border-radius: 15px;
+    box-shadow: 0 0 40px 5px brown;
+    position: absolute;
+}
+
+#im2{
+    top: 45%;
+    left: 21%;
+}
+
+
+
+.buttonDream3{
+    font-size: larger;
+    font-family: cursive;
+    background: white;
+    color: brown;
+    width: 200px;
+    height: 35px;
+    border: 1px none transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    position: absolute;
+    left: 44%;
+    transition: all 0.5s;
+}
+.buttonDream3:hover{
+    background-color: brown;
+    color: white;
+    box-shadow: 0 0 20px 5px white;
+}
+
+.dreamImg3{
+    width: 250px;
+    height: 300px;
+    transform: scale(0.0);
+    border-radius: 15px;
+    box-shadow: 0 0 40px 5px white;
+    position: absolute;
+}
+
+#im3{
+    top: 45%;
+    left: 42%;
+}
+
+.buttonDream4{
+    font-size: larger;
+    font-family: cursive;
+    background: brown;
+    color: white;
+    width: 200px;
+    height: 35px;
+    border: 1px none transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    position: absolute;
+    left: 63.5%;
+    transition: all 0.5s;
+}
+.buttonDream4:hover{
+    background-color: white;
+    color: brown;
+    box-shadow: 0 0 20px 5px brown;
+}
+
+.dreamImg4{
+    width: 250px;
+    height: 300px;
+    transform: scale(0.0);
+    border-radius: 15px;
+    box-shadow: 0 0 40px 5px brown;
+    position: absolute;
+}
+
+#im4{
+    top: 45%;
+    left: 62%;
+}
+
+.buttonDream5{
+    font-size: larger;
+    font-family: cursive;
+    background: white;
+    color: brown;
+    width: 200px;
+    height: 35px;
+    border: 1px none transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    position: absolute;
+    left: 83%;
+    transition: all 0.5s;
+}
+.buttonDream5:hover{
+    background-color: brown;
+    color: white;
+    box-shadow: 0 0 20px 5px white;
+}
+
+.dreamImg5{
+    width: 250px;
+    height: 300px;
+    transform: scale(0.0);
+    border-radius: 15px;
+    box-shadow: 0 0 40px 5px white;
+    position: absolute;
+}
+
+#im5{
+    top: 45%;
+    left: 82%;
+}
+
+
+.ativo{
+    transform: scale(1.0);
+    transition: all 0.5s;
+}
